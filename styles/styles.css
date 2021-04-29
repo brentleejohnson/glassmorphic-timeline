@@ -5,16 +5,105 @@
 }
 
 body {
+  font-family: sans-serif;
 }
 
 .landing {
   height: 100vh;
   background-color: grey;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 h1 {
   text-transform: uppercase;
+  font-weight: 1000;
+  color: #e7cfbc;
+}
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 2% 1fr;
+  grid-template-rows: repeat (4, 1fr);
+  grid-template-areas:
+    "first line ....."
+    ".... line second"
+    "third line ....."
+    ".... line fourth";
+  padding: 10%;
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.timeline-line {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-area: line;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.item-1 {
+  grid-area: first;
+}
+
+.item-2 {
+  grid-area: second;
+}
+
+.item-3 {
+  grid-area: third;
+}
+
+.item-4 {
+  grid-area: fourth;
+}
+
+.timeline-item {
+  color: black;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  padding: 10%;
+  margin: 10%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .timeline-container {
+    grid-template-areas:
+      "line first"
+      "line second"
+      "line third"
+      "line fourth";
+    grid-template-columns: 2% 98%;
+  }
+  .timeline-item {
+    grid-column: 2;
+  }
 }

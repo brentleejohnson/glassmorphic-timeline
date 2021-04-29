@@ -1,21 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glassmorphic Timeline</title>
+    <!-- 3rd Part CSS First -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Personal Stylesheets -->
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <section>
-      <!-- LANDING -->
-      <div class="landing">
-        <h1>My Timeline</h1>
+    <!-- LANDING SECTION -->
+    <section class="landing">
+      <h1>My Timeline</h1>
+    </section>
+    <!-- TIMELINE SECTION -->
+    <section class="timeline-container">
+      <!-- TIMELINE LINE -->
+      <div class="timeline-line"></div>
+      <!-- TIMELINE ITEMS -->
+      <div data-aos="fade-left" class="timeline-item item-1">
+        <h2>Company Name 1 - <span>Job Title</span></h2>
+        <h3>2019-2020</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+          necessitatibus eum itaque aliquid odio exercitationem fugiat minima?
+          Deleniti id necessitatibus tempora. Quaerat eum praesentium error
+          libero sequi magnam voluptatum ut.
+        </p>
       </div>
-      <div class="timeline-container">
-        <div class="timeline-line"></div>
-        <div class="timeline-section"></div>
+      <div data-aos="fade-right" class="timeline-item item-2">
+        <h2>Company Name 2 - <span>Job Title</span></h2>
+        <h3>2019-2020</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+          necessitatibus eum itaque aliquid odio exercitationem fugiat minima?
+          Deleniti id necessitatibus tempora. Quaerat eum praesentium error
+          libero sequi magnam voluptatum ut.
+        </p>
+      </div>
+      <div data-aos="fade-left" class="timeline-item item-3">
+        <h2>Company Name 3 - <span>Job Title</span></h2>
+        <h3>2019-2020</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+          necessitatibus eum itaque aliquid odio exercitationem fugiat minima?
+          Deleniti id necessitatibus tempora. Quaerat eum praesentium error
+          libero sequi magnam voluptatum ut.
+        </p>
+      </div>
+      <div data-aos="fade-right" class="timeline-item item-4">
+        <h2>Company Name 4 - <span>Job Title</span></h2>
+        <h3>2019-2020</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+          necessitatibus eum itaque aliquid odio exercitationem fugiat minima?
+          Deleniti id necessitatibus tempora. Quaerat eum praesentium error
+          libero sequi magnam voluptatum ut.
+        </p>
       </div>
     </section>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
